@@ -27,7 +27,7 @@
   "dependencies": {
     "colors": "~0.6.2",
     "commander": "~2.3.0",
-    "esprima": "~1.2.2",
+    "esprima": "git://github.com/ariya/esprima.git#harmony",
     "exit": "~0.1.2",
     "glob": "~4.0.0",
     "minimatch": "~1.0.0",
@@ -72,7 +72,7 @@
   },
   "scripts": {
     "lint": "jshint . && node bin/jscs lib test bin publish",
-    "test": "npm run lint && mocha",
+    "test": "npm run mocha",
     "coverage": "scov run -p common",
     "coverage-html": "scov run -p common -r html -o coverage.html",
     "browserify": "browserify --standalone JscsStringChecker lib/string-checker.js -o jscs-browser.js",
